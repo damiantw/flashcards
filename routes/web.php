@@ -23,7 +23,4 @@ Route::get('/contact', function() {
 	return view('contact');
 });
 
-Route::get('/flashcards', function() {
-	// $flashcards = link to db with flashcards, then feed it in to view function in compact
-	return view('flashcards/index');
-});
+Route::get('flashcards', 'FlashcardsController@index');
