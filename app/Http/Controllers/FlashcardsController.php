@@ -13,7 +13,16 @@ class FlashcardsController extends Controller
      */
     public function index()
     {
-        return view('flashcards/index');
+        $flashcards = [
+            'card1' => 'definition1',
+            'card2' => 'definition2',
+            'card3' => 'definition3',
+            'card4' => 'definition4',
+            'card5' => 'definition5',
+            'card6' => 'definition6',
+            'card7' => 'definition7'
+        ];
+        return view('flashcards/index', compact('flashcards'));
     }
 
     /**

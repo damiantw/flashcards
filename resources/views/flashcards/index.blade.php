@@ -12,7 +12,17 @@
                 Flashcards
             </div>
 
-            <p>Index page of the flashcards resource.</p>
+            <!-- this works -->
+            <!-- <p>
+            	{{ $flashcards['card1'] }}
+            </p> -->
+
+            @foreach ($flashcards as $key => $value)
+            <p>
+            	{{ "The card is " . $key . " and the defintion is " . $value }}
+            </p>
+            @endforeach
+
         </div>
     
 @endsection ('body')
