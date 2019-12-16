@@ -12,14 +12,9 @@
                 Flashcards
             </div>
 
-            <!-- this works -->
-            <!-- <p>
-            	{{ $flashcards['card1'] }}
-            </p> -->
-
-            @foreach ($flashcards as $key => $value)
+            @foreach ($flashcards as $flashcard)
             <p>
-            	{{ "The card is " . $key . " and the defintion is " . $value }}
+            	{{ $flashcard->word }}
             </p>
             @endforeach
 

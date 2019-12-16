@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FlashcardsController extends Controller
 {
@@ -13,15 +14,9 @@ class FlashcardsController extends Controller
      */
     public function index()
     {
-        $flashcards = [
-            'card1' => 'definition1',
-            'card2' => 'definition2',
-            'card3' => 'definition3',
-            'card4' => 'definition4',
-            'card5' => 'definition5',
-            'card6' => 'definition6',
-            'card7' => 'definition7'
-        ];
+
+        $flashcards = DB::table('flashcards')->get();
+        
         return view('flashcards/index', compact('flashcards'));
     }
 
