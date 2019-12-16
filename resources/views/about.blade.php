@@ -11,8 +11,20 @@
             <div class="title m-b-md">
                 About
             </div>
-
-            <p>About us blurb.</p>
+            <p>The goal of this project is to create a simple application for a customizable deck of flashcards.<br><br>Improvements coming soon include:
+            	<ul>
+                    <li>
+                        Updated contact links.
+                    </li>
+            		<li>
+            			Cleaner interface and more interactive design for the flashcards.
+            		</li>
+            		<li>
+            			Study metrics to see which cards you need to work more on and which you've mastered.
+            		</li>
+            		<li>User authentication and registration.</li>
+            	</ul>
+            </p>
         </div>
     
 @endsection ('body')

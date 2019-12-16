@@ -12,7 +12,9 @@
                 Contact Us
             </div>
 
-            <p>Contact us blurb.  Links.</p>
+            <div class="links">
+            	<a href="#">GitHub</a>
+            </div>
         </div>
     
 @endsection ('body')

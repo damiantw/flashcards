@@ -12,9 +12,9 @@
                 Home
             </div>
 
-            <div class="links">
+            <!-- <div class="links">
                 <a href="https://laravel.com/docs">Docs</a>
-            </div>
+            </div> -->
         </div>
     
 @endsection ('body')
