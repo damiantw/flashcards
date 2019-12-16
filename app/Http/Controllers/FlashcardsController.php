@@ -16,7 +16,7 @@ class FlashcardsController extends Controller
     {
 
         $flashcards = DB::table('flashcards')->get();
-        
+
         return view('flashcards/index', compact('flashcards'));
     }
 
@@ -27,7 +27,7 @@ class FlashcardsController extends Controller
      */
     public function create()
     {
-        //
+        return view('flashcards/create');
     }
 
     /**

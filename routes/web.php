@@ -24,3 +24,4 @@ Route::get('/contact', function() {
 });
 
 Route::get('flashcards', 'FlashcardsController@index');
+Route::get('flashcards/create', 'FlashcardsController@create');
