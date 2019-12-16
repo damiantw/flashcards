@@ -15,11 +15,16 @@
         	connected to the db, with a submit button that links it back.
         </p>
 
-        <form>
+        <form method="POST" action="/flashcards">
+        	@csrf
+        	
         	Word:<br>
         	<input type="text" name="word"><br>
         	Definition:<br>
         	<input type="text" name="definition">
+        
+        	<button type="submit">Submit</button>
+
         </form>
     </div>
 

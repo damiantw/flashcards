@@ -27,6 +27,7 @@ class FlashcardsController extends Controller
      */
     public function create()
     {
+
         return view('flashcards/create');
     }
 
@@ -38,7 +39,16 @@ class FlashcardsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd("add a card with word of " . $request->word . " and definition of " . $request->definition);
+
+        // $flashcard = new Flashcard(request(['word', 'definition']));
+        // $flashcard->save();
+        // $flashcards = DB::table('flashcards')->get();
+
+        DB::table('flashcards')->insert([
+            'word' => $request->word, 'definition' => $request->definition]);
+        //This is what you want to get back to the index page
+        return redirect('flashcards');
     }
 
     /**
