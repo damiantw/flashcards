@@ -66,20 +66,26 @@
 
             .topnav {
                 text-align: center;
-                margin-bottom: 30px;
+                margin-bottom: 90px;
+            }
+
+            .flex-start {
+                align-items: flex-start;
+                display: flex;
+                justify-content: center;
             }
         </style>
     </head>
     <body>
 
-        <div class="topnav">
+        <div class="topnav links">
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/flashcards">Flashcards</a>
             <a href="/contact">Contact</a>
         </div>
 
-        <div class="flex-center position-ref full-height">
+        <div class="flex-start position-ref full-height">
         @if (Route::has('login'))
             <div class="top-right links">
                 @auth
