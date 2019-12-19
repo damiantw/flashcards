@@ -74,6 +74,11 @@
                 display: flex;
                 justify-content: center;
             }
+
+            .submit-button {
+                display: block;
+                margin: 0 auto;
+            }
         </style>
     </head>
     <body>

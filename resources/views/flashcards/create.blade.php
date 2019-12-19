@@ -11,10 +11,6 @@
             Add A Card
         </div>
 
-        <p>Here is where we want a form to add a card with a word and a definition, 
-        	connected to the db, with a submit button that links it back.
-        </p>
-
         <form method="POST" action="/flashcards">
         	@csrf
         	
@@ -23,7 +19,7 @@
         	Definition:<br>
         	<input type="text" name="definition">
         
-        	<button type="submit">Submit</button>
+        	<button type="submit" class="submit-button">Submit</button>
 
         </form>
     </div>
