@@ -32,6 +32,7 @@
             </button>
         @endforeach
 
+        {{ $flashcards->links() }}
     </div>
     
 @endsection ('body')

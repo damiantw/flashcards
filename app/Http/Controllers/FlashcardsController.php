@@ -15,7 +15,7 @@ class FlashcardsController extends Controller
     public function index()
     {
 
-        $flashcards = DB::table('flashcards')->get();
+        $flashcards = DB::table('flashcards')->paginate(5);
 
         return view('flashcards/index', compact('flashcards'));
     }
