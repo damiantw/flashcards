@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class FlashcardsController extends Controller
 {
@@ -15,7 +14,8 @@ class FlashcardsController extends Controller
     public function index()
     {
 
-        $flashcards = DB::table('flashcards')->paginate(5);
+        //need to add pagination back in
+        $flashcards = \App\Flashcard::all();
 
         return view('flashcards/index', compact('flashcards'));
     }
@@ -39,16 +39,13 @@ class FlashcardsController extends Controller
      */
     public function store(Request $request)
     {
-        // dd("add a card with word of " . $request->word . " and definition of " . $request->definition);
 
-        // $flashcard = new Flashcard(request(['word', 'definition']));
-        // $flashcard->save();
-        // $flashcards = DB::table('flashcards')->get();
-
-        DB::table('flashcards')->insert([
-            'word' => $request->word, 'definition' => $request->definition]);
-        //This is what you want to get back to the index page
+        $flashcard = new \App\Flashcard();
+        $flashcard->word = $request->word;
+        $flashcard->definition = $request->definition;
+        $flashcard->save();
         return redirect('flashcards');
+
     }
 
     /**
