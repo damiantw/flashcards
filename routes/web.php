@@ -26,3 +26,6 @@ Route::get('/contact', function() {
 Route::get('flashcards', 'FlashcardsController@index');
 Route::get('flashcards/create', 'FlashcardsController@create');
 Route::post('flashcards', 'FlashcardsController@store');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
