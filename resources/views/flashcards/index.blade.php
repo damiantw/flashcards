@@ -17,7 +17,7 @@
 
         @foreach ($flashcards as $flashcard)
             <p id="cardFront{{$loop->iteration}}">
-                {{ " The word is " . $flashcard->word . "."}}
+                The word is {{ $flashcard->word }}.
             </p>
             <button 
                 type="button" 
