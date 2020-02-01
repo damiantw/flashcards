@@ -20,7 +20,8 @@ class FlashcardsController extends Controller
     {
 
         //need to add pagination back in
-        $flashcards = \App\Flashcard::all();
+        
+        $flashcards = \App\Flashcard::where('user_id', auth()->user()->id)->get();
 
         return view('flashcards/index', compact('flashcards'));
     }
@@ -44,11 +45,14 @@ class FlashcardsController extends Controller
      */
     public function store(Request $request)
     {
+        // dd(auth()->user()->id);
 
         $flashcard = new \App\Flashcard();
         $flashcard->word = $request->word;
         $flashcard->definition = $request->definition;
+        $flashcard->user_id = auth()->user()->id;
         $flashcard->save();
+
         return redirect('flashcards');
 
     }
