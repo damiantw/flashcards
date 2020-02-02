@@ -12,4 +12,9 @@ class Flashcard extends Model
     {
     	return $this->belongsTo('App\User');
     }
+
+    public function path()
+    {
+    	return route('flashcards.show', $this);
+    }
 }

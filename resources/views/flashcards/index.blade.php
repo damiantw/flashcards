@@ -17,12 +17,12 @@
 
         @foreach ($flashcards as $flashcard)
             <p id="cardFront{{$loop->iteration}}">
-                The word is {{ $flashcard->word }}.
+                <a href= "{{ $flashcard->path() }}">The word is {{ $flashcard->word }}.</a>
             </p>
             <button 
                 type="button" 
                 onclick='document.getElementById("cardFront{{$loop->iteration}}").
-                    innerHTML="{{ $flashcard->definition }}" '>Flip Card
+                    innerHTML="The definition is {{ $flashcard->definition }}." '>Flip Card
             </button>
         @endforeach
 

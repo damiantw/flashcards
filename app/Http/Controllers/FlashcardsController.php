@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Flashcard;
 use Illuminate\Http\Request;
 
 class FlashcardsController extends Controller
@@ -65,7 +66,8 @@ class FlashcardsController extends Controller
      */
     public function show($id)
     {
-        //
+
+        return view('flashcards.show', ['flashcard' => Flashcard::findOrFail($id)]);      
     }
 
     /**
