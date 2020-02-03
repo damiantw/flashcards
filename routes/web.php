@@ -21,6 +21,7 @@ Route::get('flashcards', 'FlashcardsController@index');
 Route::get('flashcards/create', 'FlashcardsController@create');
 Route::post('flashcards', 'FlashcardsController@store');
 Route::get('flashcards/{flashcard}', 'FlashcardsController@show')->name('flashcards.show');
+Route::get('flashcards/{flashcard}/edit', 'FlashcardsController@edit');
 
 
 Auth::routes();
