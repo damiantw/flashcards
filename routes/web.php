@@ -11,18 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
-Route::get('/about', function() {
-	return view('about');
-});
+Route::view('/about', 'about');
 
-Route::get('/contact', function() {
-	return view('contact');
-});
+Route::view('/contact', 'contact');
 
 Route::get('flashcards', 'FlashcardsController@index');
 Route::get('flashcards/create', 'FlashcardsController@create');
 Route::post('flashcards', 'FlashcardsController@store');
+Route::get('flashcards/{flashcard}', 'FlashcardsController@show')->name('flashcards.show');
+Route::get('flashcards/{flashcard}/edit', 'FlashcardsController@edit');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
