@@ -6,22 +6,23 @@
 
 @section ('body')
 
-	<!-- <div class="content">
+	<div class="content">
         <div class="title m-b-md">
-            Add A Card
+            Edit Card
         </div>
 
-        <form method="POST" action="/flashcards">
+        <form method="POST" action="/flashcards/{{ $flashcard->id }}">
         	@csrf
+            @method('PUT')
         	
         	Word:<br>
-        	<input type="text" name="word"><br>
+        	<input type="text" name="word" value="{{ $flashcard->word }}"><br>
         	Definition:<br>
-        	<input type="text" name="definition">
+        	<input type="text" name="definition" value="{{ $flashcard->definition }}">
         
         	<button type="submit" class="submit-button">Submit</button>
 
         </form>
-    </div> -->
+    </div>
 
 @endsection ('body')

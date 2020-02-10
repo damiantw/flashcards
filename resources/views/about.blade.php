@@ -14,6 +14,12 @@
             <p>The goal of this project is to create a simple application for a customizable deck of flashcards.<br><br>Improvements coming soon include:
             	<ul>
                     <li>
+                        Add link to edit form to cards after they are flipped as well as before.
+                    </li>
+                    <li>
+                        Add delete route.
+                    </li>
+                    <li>
                         Updated contact links.
                     </li>
             		<li>
@@ -22,7 +28,6 @@
             		<li>
             			Study metrics to see which cards you need to work more on and which you've mastered.
             		</li>
-            		<li>User authentication and registration.</li>
             	</ul>
             </p>
         </div>

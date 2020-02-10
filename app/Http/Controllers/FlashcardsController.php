@@ -76,9 +76,9 @@ class FlashcardsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Flashcard $flashcard)
     {
-        //
+        return view('flashcards.edit', compact('flashcard'));
     }
 
     /**
@@ -90,7 +90,16 @@ class FlashcardsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // you want to overwrite the data for the flashcard 
+        $flashcard = Flashcard::findOrFail($id);
+        $flashcard->word = $request->word;
+        $flashcard->definition = $request->definition;
+        $flashcard->user_id = auth()->user()->id;
+        $flashcard->save();
+        return redirect()->route('flashcards.show', [$flashcard]);
+        // dd($request->definition);
+        //$request->word;
+    
     }
 
     /**
