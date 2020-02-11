@@ -20,8 +20,15 @@
         	Definition:<br>
         	<input type="text" name="definition" value="{{ $flashcard->definition }}">
         
-        	<button type="submit" class="submit-button">Submit</button>
+        	<button type="submit" class="submit-button">Update</button>
 
+        </form>
+
+        <form method="post" action="/flashcards/{{ $flashcard->id }}">
+            @csrf
+            @method('DELETE')
+
+            <button type="submit">Delete</button>
         </form>
     </div>
 

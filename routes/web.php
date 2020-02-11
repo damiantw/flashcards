@@ -23,7 +23,7 @@ Route::post('flashcards', 'FlashcardsController@store');
 Route::get('flashcards/{flashcard}', 'FlashcardsController@show')->name('flashcards.show');
 Route::get('flashcards/{flashcard}/edit', 'FlashcardsController@edit');
 Route::put('flashcards/{flashcard}', 'FlashcardsController@update');
-// Route::destroy('flashcards/{flashcard}', 'FlashcardsController@destroy');
+Route::delete('flashcards/{flashcard}', 'FlashcardsController@destroy');
 
 
 Auth::routes();
