@@ -89,6 +89,7 @@ class FlashcardsController extends Controller
             'word' => 'required|max:255',
             'definition' => 'required|max:255'
         ]);
+
         $flashcard = Flashcard::findOrFail($id);
 
         $flashcard->word = $request->word;
