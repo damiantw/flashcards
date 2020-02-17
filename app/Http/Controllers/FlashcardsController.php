@@ -59,9 +59,13 @@ class FlashcardsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Flashcard $flashcard)
     {
-        return view('flashcards.show', ['flashcard' => Flashcard::findOrFail($id)]);      
+        if (auth()->user()->isNot($flashcard->owner)) {
+            abort(403);
+        }
+
+        return view('flashcards.show', compact($flashcard));      
     }
 
     /**

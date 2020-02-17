@@ -15,6 +15,6 @@ class Flashcard extends Model
 
     public function path()
     {
-    	return route('flashcards.show', $this);
+    	return "/flashcards/{$this->id}";
     }
 }
