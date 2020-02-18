@@ -14,15 +14,23 @@
             <p>The goal of this project is to create a simple application for a customizable deck of flashcards.<br><br>Improvements coming soon include:
             	<ul>
                     <li>
-                        Updated contact links.
+                        Add a factory for flashcard model and seeder.
+                    </li>
+                    <li>
+                        Add tests.
+                    </li>
+                    <li>
+                        Add basic validation error messages.
+                    </li>
+                    <li>
+                        Add flip functionality once card has already been flipped using React.
                     </li>
             		<li>
-            			Cleaner interface and more interactive design for the flashcards.
+            			Add link to edit form to cards after they are flipped as well as before.
             		</li>
             		<li>
-            			Study metrics to see which cards you need to work more on and which you've mastered.
+            			Updated contact link.
             		</li>
-            		<li>User authentication and registration.</li>
             	</ul>
             </p>
         </div>

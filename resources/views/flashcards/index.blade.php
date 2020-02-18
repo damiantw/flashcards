@@ -22,7 +22,7 @@
             <button 
                 type="button" 
                 onclick='document.getElementById("cardFront{{$loop->iteration}}").
-                    innerHTML="The definition is {{ $flashcard->definition }}." '>Flip Card
+                    innerHTML="The definition is {{ $flashcard->definition }}."  '>Flip Card
             </button>
         @endforeach
 
