@@ -11,20 +11,20 @@
             Edit Card
         </div>
 
-        <form method="POST" action="/flashcards/{{ $flashcard->id }}">
+        <form method="POST" action="{{ route('flashcards.update', ['flashcard' => $flashcard]) }}">
         	@csrf
             @method('PUT')
-        	
+
         	Word:<br>
         	<input type="text" name="word" value="{{ $flashcard->word }}"><br>
         	Definition:<br>
         	<input type="text" name="definition" value="{{ $flashcard->definition }}">
-        
+
         	<button type="submit" class="submit-button">Update</button>
 
         </form>
 
-        <form method="post" action="/flashcards/{{ $flashcard->id }}">
+        <form method="post" action="{{ route('flashcards.destroy', ['flashcard' => $flashcard]) }}">
             @csrf
             @method('DELETE')
 

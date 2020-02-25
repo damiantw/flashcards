@@ -11,14 +11,14 @@
             Add A Card
         </div>
 
-        <form method="POST" action="/flashcards">
+        <form method="POST" action="{{ route('flashcards.create') }}">
         	@csrf
-        	
+
         	Word:<br>
         	<input type="text" name="word"><br>
         	Definition:<br>
         	<input type="text" name="definition">
-        
+
         	<button type="submit" class="submit-button">Submit</button>
 
         </form>

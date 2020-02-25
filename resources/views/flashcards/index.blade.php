@@ -5,7 +5,7 @@
 @endsection ('title')
 
 @section ('body')
-    
+
     <div class="content">
         <div class="title m-b-md">
             Flashcards
@@ -17,15 +17,15 @@
 
         @foreach ($flashcards as $flashcard)
             <p id="cardFront{{$loop->iteration}}">
-                <a href= "{{ $flashcard->path() }}">The word is {{ $flashcard->word }}.</a>
+                <a href= "{{ route('flashcards.show', ['flashcard' => $flashcard]) }}">The word is {{ $flashcard->word }}.</a>
             </p>
-            <button 
-                type="button" 
+            <button
+                type="button"
                 onclick='document.getElementById("cardFront{{$loop->iteration}}").
                     innerHTML="The definition is {{ $flashcard->definition }}."  '>Flip Card
             </button>
         @endforeach
 
     </div>
-    
+
 @endsection ('body')

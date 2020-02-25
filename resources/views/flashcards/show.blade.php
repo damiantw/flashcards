@@ -1,7 +1,7 @@
 @extends ('layout')
 
 @section ('title')
-    Flashcard 
+    Flashcard
 @endsection ('title')
 
 @section ('body')
@@ -12,14 +12,14 @@
         </div>
 
         <div class="links">
-            <a href="{{ $flashcard->path() }}/edit">Edit Card</a>
+            <a href="{{ route('flashcards.edit', ['flashcard' => $flashcard]) }}">Edit Card</a>
         </div>
 
         <p id="cardFront{{$flashcard->id}}">
             The word is {{ $flashcard->word }}.
         </p>
-        <button 
-            type="button" 
+        <button
+            type="button"
             onclick='document.getElementById("cardFront{{$flashcard->id}}").
                 innerHTML="The definition is {{ $flashcard->definition }}." '>Flip Card
         </button>
