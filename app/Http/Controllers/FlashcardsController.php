@@ -46,8 +46,8 @@ class FlashcardsController extends Controller
 
     public function update(FlashcardRepository $flashcardRepo, UpdateFlashcardRequest $request, Flashcard $flashcard)
     {
-        $flashcardRepo->update($flashcard, $request->word(), $request->definition());
-        return redirect()->route('flashcards.show');
+        $flashcard = $flashcardRepo->update($flashcard, $request->word(), $request->definition());
+        return redirect()->route('flashcards.show', ['flashcard' => $flashcard]);
     }
 
     public function destroy(FlashcardRepository $flashcardRepo, Flashcard $flashcard)
